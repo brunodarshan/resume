@@ -9,138 +9,174 @@
       font-family: 'Helvetica Neue', Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      background-color: #FFF2DD;
       color: #333;
+      line-height: 1.5;
     }
 
     .container {
       max-width: 900px;
       margin: auto;
       padding: 2rem;
-      background: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    h1, h2 {
-      color: #222;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 0.3rem;
-    }
-
-    .contact p {
-      margin: 0.2rem 0;
-    }
-
-    section {
-      margin-bottom: 2rem;
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    li {
+    h1 {
       margin-bottom: 0.5rem;
+      font-size: 2.2rem;
+      color: #000;
     }
 
-    .job-title {
-      font-weight: bold;
-      margin-bottom: 0.2rem;
+    h2 {
+      font-size: 1.4rem;
+      color: #222;
+      border-bottom: 2px solid #222;
+      padding-bottom: 0.3rem;
+      margin-top: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    .company {
-      color: #555;
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
     }
 
-    .technologies {
-      font-size: 0.95rem;
-      color: #666;
+    .contact p { margin: 0; }
+
+    section { margin-bottom: 1.5rem; }
+
+    ul { padding-left: 1.2rem; margin-top: 0.5rem; }
+
+    li { margin-bottom: 0.3rem; }
+
+    .job-block { margin-bottom: 1.5rem; page-break-inside: avoid; }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
     }
 
-    a {
-      color: #0066cc;
-      text-decoration: none;
+    .job-title { font-weight: bold; font-size: 1.1rem; color: #000; }
+    
+    .company { color: #555; font-style: italic; }
+
+    .tech-pill-container {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: #444;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .tech-category { font-weight: bold; color: #666; }
+
+    a { color: #000; text-decoration: none; border-bottom: 1px solid #ccc; }
+
+    @media print {
+      @page { margin: 1.5cm; }
+      body { font-size: 11pt; background-color: #fff; font-family: "Times New Roman", Times, serif; }
+      header { text-align: center; }
+      .contact { text-align: center; display: block; }
+      .container { width: 100%; padding: 0; }
+      a { text-decoration: none; border: none; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Bruno Darshan Lopes Machado</h1>
-    <div class="contact">
-      <p><strong>Phone:</strong> +55 (86) 99553-1707</p>
-      <p><strong>Email:</strong> <a href="mailto:brunodarshan@gmail.com">brunodarshan@gmail.com</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/brunodarshan/">linkedin.com/in/brunodarshan</a></p>
-      <p><strong>Location:</strong> Teresina, Brazil</p>
-    </div>
+    <header>
+      <h1>Bruno Darshan</h1>
+      <div class="contact">
+        <p><strong>Phone:</strong> +55 (86) 99553-1707</p>
+        <p><strong>Email:</strong> brunodarshan@gmail.com</p>
+        <p><strong>LinkedIn:</strong> linkedin.com/in/brunodarshan</p>
+        <p><strong>Location:</strong> Teresina, Brazil</p>
+      </div>
+    </header>
 
     <section>
-      <h2>Resume</h2>
-      <p>Software Engineer with 9 years of experience building scalable, high-performance web systems with a focus on observability and agility. My work spans various sectors, especially in real estate, healthcare supply chain, and legal tech.</p>
+      <h2>Professional Summary</h2>
+      <p>Software Engineer with 9 years of experience building scalable, high-performance web systems with a focus on observability and agility. Expertise in real estate, fintech (recurring payments), and healthcare supply chain sectors.</p>
     </section>
 
     <section>
       <h2>Work History</h2>
 
-      <div>
-        <p class="job-title">Software Engineer</p>
-        <p class="company">Vindi, São Paulo (Remote), Brazil — Sep 2025 to Present</p>
+      <div class="job-block">
+        <div class="job-header">
+          <span class="job-title">Senior Software Engineer</span>
+          <span class="company">Vindi (Remote) — Sep 2025 to Present</span>
+        </div>
         <ul>
-          <li>Acting in the Engagement team within the Recurrence platform, focusing on customer retention and success.</li>
+          <li>Acting in the Engagement team focusing on customer retention and success.</li>
           <li>Developing features to optimize the customer lifecycle and loyalty metrics.</li>
-          <li>Technical collaboration on high-criticality systems for recurring payments and financial automation.</li>
+          <li>Technical collaboration on high-criticality systems for financial automation.</li>
         </ul>
-        <p class="technologies"><strong>Technologies:</strong> Ruby on Rails, React, AWS, PostgreSQL, Redis, Kafka, Terraform</p>
+        <div class="tech-pill-container">
+          <span class="tech-category">Stack:</span> Ruby on Rails, React, PostgreSQL, Redis, Kafka, AWS, Terraform.
+        </div>
       </div>
       
-      <div>
-        <p class="job-title">Senior Software Engineer III</p>
-        <p class="company">OLX Brasil, São Paulo (Remote), Brazil — Nov 2023 to Apr 2025</p>
+      <div class="job-block">
+        <div class="job-header">
+          <span class="job-title">Senior Software Engineer III</span>
+          <span class="company">OLX Brasil (Remote) — Nov 2023 to Apr 2025</span>
+        </div>
         <ul>
-          <li>Led improvements and maintenance of the platform and market data systems.</li>
-          <li>Ensured efficient integration between microservices.</li>
-          <li>Contributed to the reliability and performance of backend services.</li>
+          <li>Led maintenance of market data systems and ensured microservices reliability.</li>
+          <li>Optimized backend services using Datadog, Grafana, and NewRelic for observability.</li>
         </ul>
-        <p class="technologies"><strong>Technologies:</strong> Java, Kotlin, Node.js, Typescript, Python, .NET, AWS, PostgreSQL, Kafka, React, VueJs, GitHub Actions, Datadog, Grafana, NewRelic</p>
+        <div class="tech-pill-container">
+          <span class="tech-category">Stack:</span> Java, Kotlin, Node.js, Python, .NET, AWS, Kafka, GitHub Actions.
+        </div>
       </div>
 
-      <div>
-        <p class="job-title">Senior Fullstack Developer / Technical Coordinator</p>
-        <p class="company">Bionexo, São Paulo, Brazil — Nov 2020 to Nov 2023</p>
+      <div class="job-block">
+        <div class="job-header">
+          <span class="job-title">Senior Fullstack Developer / Tech Coordinator</span>
+          <span class="company">Bionexo — Nov 2020 to Nov 2023</span>
+        </div>
         <ul>
-          <li>Managed a multidisciplinary team in maintaining and evolving the main purchasing platform for buyers and suppliers.</li>
-          <li>Developed an MVP enabling top-tier clients to migrate to the main solution.</li>
+          <li>Managed a multidisciplinary team evolving the main healthcare purchasing platform.</li>
+          <li>Developed an MVP for top-tier client migration.</li>
         </ul>
-        <p class="technologies"><strong>Technologies:</strong> Ruby on Rails, Java, Node, React, PostgreSQL, Elasticsearch, AWS, OCI, Grafana, GTM, NewRelic</p>
+        <div class="tech-pill-container">
+          <span class="tech-category">Stack:</span> Ruby on Rails, Java, React, Elasticsearch, AWS, OCI, Grafana.
+        </div>
       </div>
 
-      <div>
-        <p class="job-title">Full Stack Developer</p>
-        <p class="company">Jus.com.br — Teresina, Brazil — Dec 2018 to Nov 2020</p>
+      <div class="job-block">
+        <div class="job-header">
+          <span class="job-title">Full Stack Developer</span>
+          <span class="company">Jus.com.br — Dec 2018 to Nov 2020</span>
+        </div>
         <ul>
-          <li>Developed and maintained high-availability systems.</li>
-          <li>Participated in backend architectural decisions.</li>
+          <li>Developed and maintained high-availability systems for Legal Tech.</li>
+          <li>Key participant in backend architectural decisions.</li>
         </ul>
-        <p class="technologies"><strong>Technologies:</strong> Ruby on Rails, Python, Go, PostgreSQL, Elasticsearch, Kubernetes, AWS</p>
+        <div class="tech-pill-container">
+          <span class="tech-category">Stack:</span> Ruby on Rails, Python, Go, PostgreSQL, Kubernetes, AWS.
+        </div>
       </div>
     </section>
 
     <section>
-      <h2>Academic Education</h2>
+      <h2>Education & Certifications</h2>
       <ul>
-        <li>(2018 – not completed) Bachelor in Systems Analysis and Development, IFPI – Teresina, Brazil</li>
-        <li>(2016 – 2018) Technical Degree in Logistics, UNINASSAU – Teresina, Brazil</li>
+        <li><strong>Relevant Coursework:</strong> Systems Analysis and Development, IFPI – Teresina, Brazil</li>
+        <li><strong>Technical Degree:</strong> Logistics, UNINASSAU – Teresina, Brazil</li>
       </ul>
     </section>
 
     <section>
-      <h2>Languages</h2>
+      <h2>Languages & Skills</h2>
       <ul>
-        <li>Portuguese – Native</li>
-        <li>English – Intermediate</li>
+        <li><strong>Portuguese:</strong> Native</li>
+        <li><strong>English:</strong> Professional Working Proficiency</li>
+        <li><strong>Core Expertise:</strong> Microservices Architecture, Observability (Datadog/Grafana), Cloud Computing (AWS), Scalable Backend Development.</li>
       </ul>
     </section>
   </div>
