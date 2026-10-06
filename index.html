@@ -46,6 +46,8 @@
 
     .contact p { margin: 0; }
 
+    .headline { color: #555; font-size: 1.05rem; margin: 0 0 0.75rem; }
+
     section { margin-bottom: 1.5rem; }
 
     ul { padding-left: 1.2rem; margin-top: 0.5rem; }
@@ -83,23 +85,24 @@
       .container { width: 100%; padding: 0; }
       a { text-decoration: none; border: none; }
     }
-  </style>
+</style>
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>Bruno Darshan</h1>
+      <h1>Bruno Darshan Lopes Machado</h1>
+      <p class="headline">Senior Software Engineer · Backend &amp; Full Stack · Distributed Systems · Fintech · SRE</p>
       <div class="contact">
         <p><strong>Phone:</strong> +55 (86) 99553-1707</p>
-        <p><strong>Email:</strong> brunodarshan@gmail.com</p>
-        <p><strong>LinkedIn:</strong> linkedin.com/in/brunodarshan</p>
-        <p><strong>Location:</strong> Teresina, Brazil</p>
+        <p><strong>Email:</strong> <a href="mailto:brunodarshan@gmail.com">brunodarshan@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/brunodarshan">linkedin.com/in/brunodarshan</a></p>
+        <p><strong>Location:</strong> Teresina, Brazil — Remote</p>
       </div>
     </header>
 
     <section>
       <h2>Professional Summary</h2>
-      <p>Software Engineer with 9 years of experience building scalable, high-performance web systems with a focus on observability and agility. Expertise in real estate, fintech (recurring payments), and healthcare supply chain sectors.</p>
+      <p>Senior Software Engineer with 8+ years of experience building and sustaining <strong>high-scale distributed systems</strong>, <strong>event-driven architectures</strong> and critical infrastructure modernization, across fintech (payments and recurring billing), real estate, healthcare supply chain and legal tech. Strong backend foundation in <strong>Ruby on Rails, Java, Kotlin and Node.js</strong>, with <strong>AWS</strong>, <strong>Kafka/SQS</strong>, <strong>Terraform</strong> and <strong>CI/CD</strong>. Hands-on with <strong>observability and SRE</strong> (Datadog, Grafana, New Relic, SLO/SLI, on-call, postmortems). Experienced in technical specs (RFCs), leading and mentoring multidisciplinary squads, and in using generative AI (Claude, Gemini) and custom <strong>MCP</strong> servers to boost engineering productivity.</p>
     </section>
 
     <section>
@@ -108,75 +111,114 @@
       <div class="job-block">
         <div class="job-header">
           <span class="job-title">Senior Software Engineer</span>
-          <span class="company">Vindi (Remote) — Sep 2025 to Present</span>
+          <span class="company">Vindi Pagamentos (Remote) — Sep. 2025 – Present</span>
         </div>
         <ul>
-          <li>Acting in the Engagement team focusing on customer retention and success.</li>
-          <li>Developing features to optimize the customer lifecycle and loyalty metrics.</li>
-          <li>Technical collaboration on high-criticality systems for financial automation.</li>
+          <li>Engagement team in a <strong>POS (Point of Sale)</strong> context — features for customer retention, lifecycle optimization and loyalty metrics on high-criticality financial automation systems.</li>
+          <li>Payment gateway integrations (authentication, transactions, refunds) and <strong>recurring billing &amp; subscription APIs</strong> — billing cycles, plans, upgrades/downgrades and failure handling.</li>
+          <li>Payment <strong>webhooks and events</strong> with idempotency and delivery-failure resilience; <strong>financial reconciliation</strong> reports ensuring data integrity across systems.</li>
+          <li>Cloud infrastructure as code with <strong>Terraform</strong>, validated and deployed through <strong>GitHub Actions and GitLab CI</strong>; SLO/SLI tracking.</li>
+          <li>Built custom <strong>MCP (Model Context Protocol)</strong> servers connecting LLMs (Claude, Gemini) to Jira, GitHub and GitLab.</li>
         </ul>
         <div class="tech-pill-container">
-          <span class="tech-category">Stack:</span> Ruby on Rails, React, PostgreSQL, Redis, Kafka, AWS, Terraform.
-        </div>
-      </div>
-      
-      <div class="job-block">
-        <div class="job-header">
-          <span class="job-title">Senior Software Engineer III</span>
-          <span class="company">OLX Brasil (Remote) — Nov 2023 to Apr 2025</span>
-        </div>
-        <ul>
-          <li>Led maintenance of market data systems and ensured microservices reliability.</li>
-          <li>Optimized backend services using Datadog, Grafana, and NewRelic for observability.</li>
-        </ul>
-        <div class="tech-pill-container">
-          <span class="tech-category">Stack:</span> Java, Kotlin, Node.js, Python, .NET, AWS, Kafka, GitHub Actions.
+          <span class="tech-category">Stack:</span> Ruby on Rails · React · PostgreSQL · Redis · Sidekiq · Kafka · AWS · Terraform · GitHub Actions · GitLab CI
         </div>
       </div>
 
       <div class="job-block">
         <div class="job-header">
-          <span class="job-title">Senior Fullstack Developer / Tech Coordinator</span>
-          <span class="company">Bionexo — Nov 2020 to Nov 2023</span>
+          <span class="job-title">Senior Software Engineer III</span>
+          <span class="company">OLX Brasil — Zap Imóveis (Remote) — Nov. 2023 – Apr. 2025</span>
         </div>
         <ul>
-          <li>Managed a multidisciplinary team evolving the main healthcare purchasing platform.</li>
-          <li>Developed an MVP for top-tier client migration.</li>
+          <li>B2B <strong>lead distribution system</strong> for Zap Imóveis — <strong>Java and Kotlin</strong> microservices with complex business rules at high scale.</li>
+          <li>Led maintenance of market data systems and ensured <strong>microservices reliability</strong>.</li>
+          <li>Queue-based infrastructure with <strong>AWS SQS FIFO + DLQ</strong> for strict ordering and guaranteed delivery; <strong>Apache Kafka</strong> consumers for data lake ingestion (ETL) and decoupled platform operations.</li>
+          <li><strong>GraphQL BFF</strong> in Node.js/TypeScript with unit and integration tests in Jest.</li>
+          <li>Observability with <strong>Datadog, Grafana and New Relic</strong>; contributed to structuring <strong>SLO/SLI</strong> metrics.</li>
         </ul>
         <div class="tech-pill-container">
-          <span class="tech-category">Stack:</span> Ruby on Rails, Java, React, Elasticsearch, AWS, OCI, Grafana.
+          <span class="tech-category">Stack:</span> Java · Kotlin · Node.js · TypeScript · Python · .NET · React · PostgreSQL · Kafka · AWS SQS · AWS · GitHub Actions · Datadog
+        </div>
+      </div>
+
+      <div class="job-block">
+        <div class="job-header">
+          <span class="job-title">Tech Coordinator &amp; Senior Full Stack Developer</span>
+          <span class="company">Bionexo (Remote) — Nov. 2020 – Nov. 2023</span>
+        </div>
+        <ul>
+          <li>Technical coordination of a <strong>multidisciplinary team of 5 engineers</strong> — technical planning, code reviews, mentoring and governance.</li>
+          <li>Led the replacement of legacy database view-engine reports with a <strong>real-time, data-driven architecture</strong> for the hospital supply chain market.</li>
+          <li>Delivered an <strong>MVP for a top-tier client migration</strong> to the main healthcare purchasing platform.</li>
+          <li><strong>SRE</strong>: on-call rotation, incident <strong>postmortems</strong> and SLO/SLI metrics; stability and response-time monitoring with New Relic and Grafana.</li>
+        </ul>
+        <div class="tech-pill-container">
+          <span class="tech-category">Stack:</span> Ruby on Rails · Java · Node.js · React · PostgreSQL · Elasticsearch · Redis · Sidekiq · AWS · OCI · Grafana · New Relic
         </div>
       </div>
 
       <div class="job-block">
         <div class="job-header">
           <span class="job-title">Full Stack Developer</span>
-          <span class="company">Jus.com.br — Dec 2018 to Nov 2020</span>
+          <span class="company">Jus.com.br — Dec. 2018 – Nov. 2020</span>
         </div>
         <ul>
-          <li>Developed and maintained high-availability systems for Legal Tech.</li>
-          <li>Key participant in backend architectural decisions.</li>
+          <li>Maintained <strong>high-traffic distributed services</strong> for legal tech and refactored legacy systems, focusing on stability and architectural compliance.</li>
+          <li>Key participant in backend architectural decisions; tracked SLO/SLI for service availability.</li>
         </ul>
         <div class="tech-pill-container">
-          <span class="tech-category">Stack:</span> Ruby on Rails, Python, Go, PostgreSQL, Kubernetes, AWS.
+          <span class="tech-category">Stack:</span> Ruby on Rails · Go · Python · PostgreSQL · Elasticsearch · Redis · Sidekiq · Docker · Kubernetes · AWS
+        </div>
+      </div>
+
+      <div class="job-block">
+        <div class="job-header">
+          <span class="job-title">Mobile Developer (Contractor)</span>
+          <span class="company">AMC Publicidade — “Teresina em Dia” Android app — Jul. 2018 – Nov. 2018</span>
+        </div>
+        <ul>
+          <li>Built an Android app in <strong>React Native + Expo</strong> — interactive city-zone map, stack navigation and REST API integration. Modernized in 2026 to React Native 0.81, Expo SDK 54 and React 19.</li>
+        </ul>
+        <div class="tech-pill-container">
+          <span class="tech-category">Stack:</span> React Native · Expo · JavaScript · REST APIs
         </div>
       </div>
     </section>
 
     <section>
-      <h2>Education & Certifications</h2>
+      <h2>Technical Skills</h2>
       <ul>
-        <li><strong>Relevant Coursework:</strong> Systems Analysis and Development, IFPI – Teresina, Brazil</li>
-        <li><strong>Technical Degree:</strong> Logistics, UNINASSAU – Teresina, Brazil</li>
+        <li><strong>Backend:</strong> Ruby on Rails, Java, Kotlin, Node.js, TypeScript</li>
+        <li><strong>APIs &amp; Architecture:</strong> REST, GraphQL, Microservices, Event-Driven Architecture, Distributed Systems</li>
+        <li><strong>Messaging &amp; Async:</strong> Apache Kafka, AWS SQS (FIFO, DLQ), Sidekiq</li>
+        <li><strong>Data:</strong> PostgreSQL, Redis, Elasticsearch</li>
+        <li><strong>Cloud &amp; DevOps:</strong> AWS (EC2, S3, RDS, Lambda, SQS), OCI, Terraform, Docker, Kubernetes, GitHub Actions, GitLab CI/CD</li>
+        <li><strong>Observability &amp; SRE:</strong> Datadog, Grafana, New Relic, SLO/SLI, On-call, Postmortems</li>
+        <li><strong>Testing:</strong> RSpec, Capybara, FactoryBot, Jest, TDD</li>
+        <li><strong>Frontend &amp; Mobile:</strong> React, React Native</li>
+        <li><strong>AI Engineering:</strong> LLM integration (Claude, Gemini), Custom MCP servers</li>
+        <li><strong>Leadership:</strong> Technical Specs (RFCs), Code Review, Mentoring, Technical Governance</li>
+        <li><strong>Also familiar with:</strong> Python, Go, .NET / C#, Vue.js, MongoDB</li>
       </ul>
     </section>
 
     <section>
-      <h2>Languages & Skills</h2>
+      <h2>Education &amp; Certifications</h2>
+      <ul>
+        <li><strong>Systems Analysis &amp; Development</strong> — IFPI · Relevant coursework (not completed)</li>
+        <li><strong>Logistics Technician</strong> — UNINASSAU · 2016 – 2018</li>
+        <li><strong>Database Administration</strong> — SENAI</li>
+        <li><strong>Git &amp; Azure DevOps Fundamentals</strong> — Balta.io</li>
+        <li><strong>.NET Fundamentals</strong> — Balta.io</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Languages</h2>
       <ul>
         <li><strong>Portuguese:</strong> Native</li>
         <li><strong>English:</strong> Professional Working Proficiency</li>
-        <li><strong>Core Expertise:</strong> Microservices Architecture, Observability (Datadog/Grafana), Cloud Computing (AWS), Scalable Backend Development.</li>
       </ul>
     </section>
   </div>
