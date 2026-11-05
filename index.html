@@ -4,18 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bruno Darshan | Resume</title>
+  <meta name="description" content="Resume of Bruno Darshan, Senior Software Engineer (backend, Ruby on Rails, Java, Kotlin, Node.js, AWS). Available in English and Portuguese." />
+  <link rel="alternate" hreflang="en" href="https://resume.brunodarshan.com.br/?lang=en" />
+  <link rel="alternate" hreflang="pt-BR" href="https://resume.brunodarshan.com.br/?lang=pt" />
+  <link rel="alternate" hreflang="x-default" href="https://resume.brunodarshan.com.br/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
       margin: 0;
       padding: 0;
-      background-color: #FFF2DD;
-      color: #333;
+      background-color: #FAFAFA;
+      color: #171717;
       line-height: 1.5;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 820px;
       margin: auto;
       padding: 2rem;
     }
@@ -23,17 +31,19 @@
     h1 {
       margin-bottom: 0.5rem;
       font-size: 2.2rem;
-      color: #000;
+      color: #171717;
+      letter-spacing: -0.02em;
     }
 
     h2 {
-      font-size: 1.4rem;
-      color: #222;
-      border-bottom: 2px solid #222;
+      font-size: 0.85rem;
+      color: #525252;
+      border-bottom: 1px solid rgba(23, 23, 23, 0.12);
       padding-bottom: 0.3rem;
-      margin-top: 1.5rem;
+      margin-top: 2.5rem;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.08em;
+      font-weight: 600;
     }
 
     .contact {
@@ -46,7 +56,7 @@
 
     .contact p { margin: 0; }
 
-    .headline { color: #555; font-size: 1.05rem; margin: 0 0 0.75rem; }
+    .headline { color: #525252; font-size: 1.05rem; margin: 0 0 0.75rem; }
 
     section { margin-bottom: 1.5rem; }
 
@@ -63,19 +73,22 @@
       flex-wrap: wrap;
     }
 
-    .job-title { font-weight: bold; font-size: 1.1rem; color: #000; }
+    .job-title { font-weight: 600; font-size: 1.05rem; color: #171717; }
     
-    .company { color: #555; font-style: italic; }
+    .company { color: #525252; font-size: 0.9rem; }
 
     .tech-pill-container {
       margin-top: 0.5rem;
       font-size: 0.85rem;
-      color: #444;
+      color: #525252;
     }
 
-    .tech-category { font-weight: bold; color: #666; }
+    .tech-category { font-weight: 600; color: #171717; }
 
-    a { color: #000; text-decoration: none; border-bottom: 1px solid #ccc; }
+    a { color: #171717; text-decoration: none; border-bottom: 1px solid rgba(23, 23, 23, 0.25); }
+    a:hover { color: #2563EB; border-color: #2563EB; }
+    ::selection { background: #171717; color: #FFFFFF; }
+    li::marker { color: #A3A3A3; }
 
     @media print {
       @page { margin: 1.5cm; }
@@ -85,144 +98,340 @@
       .container { width: 100%; padding: 0; }
       a { text-decoration: none; border: none; }
     }
+
+    .lang-switch { display: flex; justify-content: center; gap: 0.25rem; margin-bottom: 1rem; font-size: 0.85rem; }
+    .lang-switch button {
+      font: inherit; cursor: pointer; padding: 0.3rem 0.75rem;
+      background: #FFFFFF; color: #171717; border: 1px solid rgba(23, 23, 23, 0.15); border-radius: 999px;
+    }
+    .lang-switch button { display: inline-flex; align-items: center; gap: 0.45rem; }
+    .lang-switch .flag { width: 1.15rem; height: 0.8rem; border-radius: 2px; box-shadow: 0 0 0 1px rgba(23, 23, 23, 0.12); flex: none; }
+    .lang-switch button[aria-pressed="true"] { background: #171717; color: #FFFFFF; border-color: #171717; }
+    .lang-switch button:focus-visible { outline: 2px solid #000; outline-offset: 2px; }
+    [data-lang][hidden] { display: none; }
+    #print-btn {
+      position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 50;
+      width: 3.5rem; height: 3.5rem; border: 0; border-radius: 50%; cursor: pointer;
+      background: #171717; color: #FFFFFF;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); transition: transform 0.15s;
+    }
+    #print-btn:hover { transform: scale(1.08); }
+    #print-btn:active { transform: scale(0.95); }
+    #print-btn:focus-visible { outline: 2px solid #2563EB; outline-offset: 3px; }
+    @media print { .lang-switch, #print-btn { display: none; } }
 </style>
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1>Bruno Darshan Lopes Machado</h1>
-      <p class="headline">Senior Software Engineer · Backend &amp; Full Stack · Distributed Systems · Fintech · SRE</p>
-      <div class="contact">
-        <p><strong>Phone:</strong> +55 (86) 99553-1707</p>
-        <p><strong>Email:</strong> <a href="mailto:brunodarshan@gmail.com">brunodarshan@gmail.com</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/brunodarshan">linkedin.com/in/brunodarshan</a></p>
-        <p><strong>Location:</strong> Teresina, Brazil — Remote</p>
-      </div>
-    </header>
+    <nav class="lang-switch" aria-label="Language / Idioma">
+      <button type="button" data-set-lang="en" aria-pressed="true"><svg class="flag" viewBox="0 0 19 13" aria-hidden="true"><rect width="19" height="13" fill="#FFFFFF"/><path fill="#B22234" d="M0 0h19v1H0zM0 2h19v1H0zM0 4h19v1H0zM0 6h19v1H0zM0 8h19v1H0zM0 10h19v1H0zM0 12h19v1H0z"/><rect width="7.6" height="7" fill="#3C3B6E"/></svg>English</button>
+      <button type="button" data-set-lang="pt" aria-pressed="false"><svg class="flag" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" fill="#009C3B"/><path fill="#FFDF00" d="M10 1.6 18.2 7 10 12.4 1.8 7z"/><circle cx="10" cy="7" r="3.1" fill="#002776"/></svg>Português</button>
+    </nav>
 
-    <section>
-      <h2>Professional Summary</h2>
-      <p>Senior Software Engineer with 8+ years of experience building and sustaining <strong>high-scale distributed systems</strong>, <strong>event-driven architectures</strong> and critical infrastructure modernization, across fintech (payments and recurring billing), real estate, healthcare supply chain and legal tech. Strong backend foundation in <strong>Ruby on Rails, Java, Kotlin and Node.js</strong>, with <strong>AWS</strong>, <strong>Kafka/SQS</strong>, <strong>Terraform</strong> and <strong>CI/CD</strong>. Hands-on with <strong>observability and SRE</strong> (Datadog, Grafana, New Relic, SLO/SLI, on-call, postmortems). Experienced in technical specs (RFCs), leading and mentoring multidisciplinary squads, and in using generative AI (Claude, Gemini) and custom <strong>MCP</strong> servers to boost engineering productivity.</p>
-    </section>
-
-    <section>
-      <h2>Work History</h2>
-
-      <div class="job-block">
-        <div class="job-header">
-          <span class="job-title">Senior Software Engineer</span>
-          <span class="company">Vindi Pagamentos (Remote) — Sep. 2025 – Present</span>
+    <div data-lang="en" lang="en">
+      <header>
+        <h1>Bruno Darshan Lopes Machado</h1>
+        <p class="headline">Senior Software Engineer · Backend &amp; Full Stack · Distributed Systems · Fintech · SRE</p>
+        <div class="contact">
+          <p><strong>Phone:</strong> +55 (86) 99553-1707</p>
+          <p><strong>Email:</strong> <a href="mailto:brunodarshan@gmail.com">brunodarshan@gmail.com</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/brunodarshan">linkedin.com/in/brunodarshan</a></p>
+          <p><strong>Location:</strong> Teresina, Brazil — Remote</p>
         </div>
+      </header>
+
+      <section>
+        <h2>Professional Summary</h2>
+        <p>Senior Software Engineer with 8+ years of experience building and sustaining <strong>high-scale distributed systems</strong>, <strong>event-driven architectures</strong> and critical infrastructure modernization, across fintech (payments and recurring billing), real estate, healthcare supply chain and legal tech. Strong backend foundation in <strong>Ruby on Rails, Java, Kotlin and Node.js</strong>, with <strong>AWS</strong>, <strong>Kafka/SQS</strong>, <strong>Terraform</strong> and <strong>CI/CD</strong>. Hands-on with <strong>observability and SRE</strong> (Datadog, Grafana, New Relic, SLO/SLI, on-call, postmortems). Experienced in technical specs (RFCs), leading and mentoring multidisciplinary squads, and in using generative AI (Claude, Gemini) and custom <strong>MCP</strong> servers to boost engineering productivity.</p>
+      </section>
+
+      <section>
+        <h2>Work History</h2>
+
+        <div class="job-block">
+          <div class="job-header">
+            <span class="job-title">Senior Software Engineer</span>
+            <span class="company">Vindi Pagamentos (Remote) — Sep. 2025 – Present</span>
+          </div>
+          <ul>
+            <li>Engagement team in a <strong>POS (Point of Sale)</strong> context — features for customer retention, lifecycle optimization and loyalty metrics on high-criticality financial automation systems.</li>
+            <li>Payment gateway integrations (authentication, transactions, refunds) and <strong>recurring billing &amp; subscription APIs</strong> — billing cycles, plans, upgrades/downgrades and failure handling.</li>
+            <li>Payment <strong>webhooks and events</strong> with idempotency and delivery-failure resilience; <strong>financial reconciliation</strong> reports ensuring data integrity across systems.</li>
+            <li>Cloud infrastructure as code with <strong>Terraform</strong>, validated and deployed through <strong>GitHub Actions and GitLab CI</strong>; SLO/SLI tracking.</li>
+            <li>Built custom <strong>MCP (Model Context Protocol)</strong> servers connecting LLMs (Claude, Gemini) to Jira, GitHub and GitLab.</li>
+          </ul>
+          <div class="tech-pill-container">
+            <span class="tech-category">Stack:</span> Ruby on Rails · React · PostgreSQL · MySQL · Redis · Sidekiq · AWS · Terraform · GitHub Actions · GitLab CI
+          </div>
+        </div>
+
+        <div class="job-block">
+          <div class="job-header">
+            <span class="job-title">Senior Software Engineer III</span>
+            <span class="company">OLX Brasil — Zap Imóveis (Remote) — Nov. 2023 – Apr. 2025</span>
+          </div>
+          <ul>
+            <li>B2B <strong>lead distribution system</strong> for Zap Imóveis — <strong>Java and Kotlin</strong> microservices with complex business rules at high scale.</li>
+            <li>Led maintenance of market data systems and ensured <strong>microservices reliability</strong>.</li>
+            <li>Queue-based infrastructure with <strong>AWS SQS FIFO + DLQ</strong> for strict ordering and guaranteed delivery; <strong>Apache Kafka</strong> consumers for data lake ingestion (ETL) and decoupled platform operations.</li>
+            <li><strong>GraphQL BFF</strong> in Node.js/TypeScript with unit and integration tests in Jest.</li>
+            <li>Observability with <strong>Datadog, Grafana and New Relic</strong>; contributed to structuring <strong>SLO/SLI</strong> metrics.</li>
+          </ul>
+          <div class="tech-pill-container">
+            <span class="tech-category">Stack:</span> Java · Kotlin · Node.js · TypeScript · Python · .NET · React · PostgreSQL · Kafka · AWS SQS · AWS SNS · AWS · GitHub Actions · Datadog
+          </div>
+        </div>
+
+        <div class="job-block">
+          <div class="job-header">
+            <span class="job-title">Tech Coordinator &amp; Senior Full Stack Developer</span>
+            <span class="company">Bionexo (Remote) — Nov. 2020 – Nov. 2023</span>
+          </div>
+          <ul>
+            <li>Technical coordination of a <strong>multidisciplinary team of 5 engineers</strong> — technical planning, code reviews, mentoring and governance.</li>
+            <li>Direct interface with non-technical areas of the company, aligning business needs with technical deliveries.</li>
+            <li>Led the replacement of legacy database view-engine reports with a <strong>real-time, data-driven architecture</strong> for the hospital supply chain market.</li>
+            <li>Delivered an <strong>MVP for a top-tier client migration</strong> to the main healthcare purchasing platform.</li>
+            <li><strong>SRE</strong>: on-call rotation, incident <strong>postmortems</strong> and SLO/SLI metrics; stability and response-time monitoring with New Relic and Grafana.</li>
+          </ul>
+          <div class="tech-pill-container">
+            <span class="tech-category">Stack:</span> Ruby on Rails · Java · Node.js · React · PostgreSQL · Elasticsearch · Redis · Sidekiq · AWS · AWS SNS · OCI · Grafana · New Relic
+          </div>
+        </div>
+
+        <div class="job-block">
+          <div class="job-header">
+            <span class="job-title">Full Stack Developer</span>
+            <span class="company">Jus.com.br — Dec. 2018 – Nov. 2020</span>
+          </div>
+          <ul>
+            <li>Maintained <strong>high-traffic distributed services</strong> for legal tech and refactored legacy systems, focusing on stability and architectural compliance; <strong>MySQL</strong> as the main database.</li>
+            <li>Key participant in backend architectural decisions; tracked SLO/SLI for service availability.</li>
+          </ul>
+          <div class="tech-pill-container">
+            <span class="tech-category">Stack:</span> Ruby on Rails · Go · Python · MySQL · PostgreSQL · Elasticsearch · Redis · Sidekiq · Kubernetes · AWS
+          </div>
+        </div>
+
+        <div class="job-block">
+          <div class="job-header">
+            <span class="job-title">Web &amp; Mobile Developer (Contractor)</span>
+            <span class="company">AMC Publicidade — Jul. 2018 – Nov. 2018</span>
+          </div>
+          <ul>
+            <li>Maintained and improved the agency’s <strong>WordPress (PHP)</strong> websites.</li>
+            <li>Built the “Teresina em Dia” Android app in <strong>React Native + Expo</strong> — interactive city-zone map, stack navigation and REST API integration. Modernized in 2026 to React Native 0.81, Expo SDK 54 and React 19.</li>
+          </ul>
+          <div class="tech-pill-container">
+            <span class="tech-category">Stack:</span> PHP · WordPress · React Native · Expo · JavaScript · REST APIs
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Technical Skills</h2>
         <ul>
-          <li>Engagement team in a <strong>POS (Point of Sale)</strong> context — features for customer retention, lifecycle optimization and loyalty metrics on high-criticality financial automation systems.</li>
-          <li>Payment gateway integrations (authentication, transactions, refunds) and <strong>recurring billing &amp; subscription APIs</strong> — billing cycles, plans, upgrades/downgrades and failure handling.</li>
-          <li>Payment <strong>webhooks and events</strong> with idempotency and delivery-failure resilience; <strong>financial reconciliation</strong> reports ensuring data integrity across systems.</li>
-          <li>Cloud infrastructure as code with <strong>Terraform</strong>, validated and deployed through <strong>GitHub Actions and GitLab CI</strong>; SLO/SLI tracking.</li>
-          <li>Built custom <strong>MCP (Model Context Protocol)</strong> servers connecting LLMs (Claude, Gemini) to Jira, GitHub and GitLab.</li>
+          <li><strong>Backend:</strong> Ruby on Rails, Java, Kotlin, Node.js, TypeScript</li>
+          <li><strong>APIs &amp; Architecture:</strong> REST, GraphQL, Microservices, Event-Driven Architecture, Distributed Systems</li>
+          <li><strong>Messaging &amp; Async:</strong> Apache Kafka, AWS SQS (FIFO, DLQ), AWS SNS, Sidekiq</li>
+          <li><strong>Data:</strong> PostgreSQL, MySQL, Redis, Elasticsearch</li>
+          <li><strong>Cloud &amp; DevOps:</strong> AWS (EC2, S3, RDS, Lambda, SQS, SNS), OCI, Terraform, Docker, Kubernetes, GitHub Actions, GitLab CI/CD</li>
+          <li><strong>Observability &amp; SRE:</strong> Datadog, Grafana, New Relic, SLO/SLI, On-call, Postmortems</li>
+          <li><strong>Testing:</strong> RSpec, Capybara, FactoryBot, Jest, TDD</li>
+          <li><strong>Frontend &amp; Mobile:</strong> React, React Native</li>
+          <li><strong>AI Engineering:</strong> LLM integration (Claude, Gemini), Custom MCP servers</li>
+          <li><strong>Leadership:</strong> Technical Specs (RFCs), Code Review, Mentoring, Technical Governance</li>
+          <li><strong>Also familiar with:</strong> Python, Go, .NET / C#, PHP (WordPress), Vue.js, MongoDB</li>
         </ul>
-        <div class="tech-pill-container">
-          <span class="tech-category">Stack:</span> Ruby on Rails · React · PostgreSQL · MySQL · Redis · Sidekiq · AWS · Terraform · GitHub Actions · GitLab CI
-        </div>
-      </div>
+      </section>
 
-      <div class="job-block">
-        <div class="job-header">
-          <span class="job-title">Senior Software Engineer III</span>
-          <span class="company">OLX Brasil — Zap Imóveis (Remote) — Nov. 2023 – Apr. 2025</span>
-        </div>
+      <section>
+        <h2>Education &amp; Certifications</h2>
         <ul>
-          <li>B2B <strong>lead distribution system</strong> for Zap Imóveis — <strong>Java and Kotlin</strong> microservices with complex business rules at high scale.</li>
-          <li>Led maintenance of market data systems and ensured <strong>microservices reliability</strong>.</li>
-          <li>Queue-based infrastructure with <strong>AWS SQS FIFO + DLQ</strong> for strict ordering and guaranteed delivery; <strong>Apache Kafka</strong> consumers for data lake ingestion (ETL) and decoupled platform operations.</li>
-          <li><strong>GraphQL BFF</strong> in Node.js/TypeScript with unit and integration tests in Jest.</li>
-          <li>Observability with <strong>Datadog, Grafana and New Relic</strong>; contributed to structuring <strong>SLO/SLI</strong> metrics.</li>
+          <li><strong>Systems Analysis &amp; Development</strong> — IFPI · Relevant coursework (not completed)</li>
+          <li><strong>Logistics Technician</strong> — UNINASSAU · 2016 – 2018</li>
+          <li><strong>Database Administration</strong> — SENAI</li>
+          <li><strong>Git &amp; Azure DevOps Fundamentals</strong> — Balta.io</li>
+          <li><strong>.NET Fundamentals</strong> — Balta.io</li>
         </ul>
-        <div class="tech-pill-container">
-          <span class="tech-category">Stack:</span> Java · Kotlin · Node.js · TypeScript · Python · .NET · React · PostgreSQL · Kafka · AWS SQS · AWS SNS · AWS · GitHub Actions · Datadog
-        </div>
-      </div>
+      </section>
 
-      <div class="job-block">
-        <div class="job-header">
-          <span class="job-title">Tech Coordinator &amp; Senior Full Stack Developer</span>
-          <span class="company">Bionexo (Remote) — Nov. 2020 – Nov. 2023</span>
-        </div>
+      <section>
+        <h2>Languages</h2>
         <ul>
-          <li>Technical coordination of a <strong>multidisciplinary team of 5 engineers</strong> — technical planning, code reviews, mentoring and governance.</li>
-          <li>Direct interface with non-technical areas of the company, aligning business needs with technical deliveries.</li>
-          <li>Led the replacement of legacy database view-engine reports with a <strong>real-time, data-driven architecture</strong> for the hospital supply chain market.</li>
-          <li>Delivered an <strong>MVP for a top-tier client migration</strong> to the main healthcare purchasing platform.</li>
-          <li><strong>SRE</strong>: on-call rotation, incident <strong>postmortems</strong> and SLO/SLI metrics; stability and response-time monitoring with New Relic and Grafana.</li>
+          <li><strong>Portuguese:</strong> Native</li>
+          <li><strong>English:</strong> Professional Working Proficiency</li>
         </ul>
-        <div class="tech-pill-container">
-          <span class="tech-category">Stack:</span> Ruby on Rails · Java · Node.js · React · PostgreSQL · Elasticsearch · Redis · Sidekiq · AWS · AWS SNS · OCI · Grafana · New Relic
-        </div>
-      </div>
+      </section>
+    </div>
 
-      <div class="job-block">
-        <div class="job-header">
-          <span class="job-title">Full Stack Developer</span>
-          <span class="company">Jus.com.br — Dec. 2018 – Nov. 2020</span>
+    <div data-lang="pt" lang="pt-BR" hidden>
+      <header>
+        <h1>Bruno Darshan Lopes Machado</h1>
+        <p class="headline">Engenheiro de Software Sênior · Backend &amp; Full Stack · Sistemas Distribuídos · Fintech · SRE</p>
+        <div class="contact">
+          <p><strong>Telefone:</strong> +55 (86) 99553-1707</p>
+          <p><strong>Email:</strong> <a href="mailto:brunodarshan@gmail.com">brunodarshan@gmail.com</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/brunodarshan">linkedin.com/in/brunodarshan</a></p>
+          <p><strong>Localização:</strong> Teresina, PI — Remoto</p>
         </div>
+      </header>
+
+      <section>
+        <h2>Resumo Profissional</h2>
+        <p>Engenheiro de Software Sênior com mais de 8 anos de experiência no desenvolvimento e na sustentação de <strong>sistemas distribuídos de alta escala</strong>, <strong>arquiteturas orientadas a eventos</strong> e modernização de infraestruturas críticas, nos setores de fintech (meios de pagamento e cobrança recorrente), mercado imobiliário, supply chain hospitalar e legal tech. Base sólida de backend em <strong>Ruby on Rails, Java, Kotlin e Node.js</strong>, com <strong>AWS</strong>, <strong>Kafka/SQS</strong>, <strong>Terraform</strong> e <strong>CI/CD</strong>. Prática em <strong>observabilidade e SRE</strong> (Datadog, Grafana, New Relic, SLO/SLI, on-call, postmortems). Experiência com especificações técnicas (RFCs), liderança e mentoria de squads multidisciplinares, e uso de IA generativa (Claude, Gemini) e servidores <strong>MCP</strong> próprios para aumentar a produtividade da engenharia.</p>
+      </section>
+
+      <section>
+        <h2>Experiência Profissional</h2>
+
+        <div class="job-block">
+          <div class="job-header">
+            <span class="job-title">Senior Software Engineer</span>
+            <span class="company">Vindi Pagamentos (Remoto) — Set. 2025 – Atual</span>
+          </div>
+          <ul>
+            <li>Time de Engagement em contexto de <strong>POS (Point of Sale)</strong> — features de retenção, otimização do ciclo de vida e métricas de fidelização de clientes em sistemas de alta criticidade para automação financeira.</li>
+            <li>Integrações com gateways de pagamento (autenticação, transações, estornos) e <strong>APIs de cobrança recorrente e assinaturas</strong> — ciclos de pagamento, planos, upgrades/downgrades e tratamento de falhas.</li>
+            <li><strong>Webhooks e eventos de pagamento</strong> com idempotência e resiliência a falhas de entrega; relatórios de <strong>conciliação financeira</strong> garantindo a integridade de dados entre sistemas.</li>
+            <li>Infraestrutura como código com <strong>Terraform</strong>, validada e entregue por <strong>GitHub Actions e GitLab CI</strong>; acompanhamento de SLO/SLI.</li>
+            <li>Criação de servidores <strong>MCP (Model Context Protocol)</strong> próprios conectando LLMs (Claude, Gemini) a Jira, GitHub e GitLab.</li>
+          </ul>
+          <div class="tech-pill-container">
+            <span class="tech-category">Stack:</span> Ruby on Rails · React · PostgreSQL · MySQL · Redis · Sidekiq · AWS · Terraform · GitHub Actions · GitLab CI
+          </div>
+        </div>
+
+        <div class="job-block">
+          <div class="job-header">
+            <span class="job-title">Senior Software Engineer III</span>
+            <span class="company">OLX Brasil — Zap Imóveis (Remoto) — Nov. 2023 – Abr. 2025</span>
+          </div>
+          <ul>
+            <li><strong>Sistema de distribuição de leads</strong> B2B do Zap Imóveis — microsserviços em <strong>Java e Kotlin</strong> com regras de negócio complexas em alta escala.</li>
+            <li>Liderou a manutenção de sistemas de dados de mercado e garantiu a <strong>confiabilidade dos microsserviços</strong>.</li>
+            <li>Infraestrutura de filas com <strong>AWS SQS FIFO + DLQ</strong>, com ordem estrita e garantia de entrega; consumidores <strong>Apache Kafka</strong> para ingestão em datalake (ETL) e operações desacopladas da plataforma.</li>
+            <li><strong>BFF GraphQL</strong> em Node.js/TypeScript com testes unitários e de integração em Jest.</li>
+            <li>Observabilidade com <strong>Datadog, Grafana e New Relic</strong>; participou da estruturação de métricas de <strong>SLO/SLI</strong>.</li>
+          </ul>
+          <div class="tech-pill-container">
+            <span class="tech-category">Stack:</span> Java · Kotlin · Node.js · TypeScript · Python · .NET · React · PostgreSQL · Kafka · AWS SQS · AWS SNS · AWS · GitHub Actions · Datadog
+          </div>
+        </div>
+
+        <div class="job-block">
+          <div class="job-header">
+            <span class="job-title">Coordenador Técnico &amp; Senior Full Stack</span>
+            <span class="company">Bionexo (Remoto) — Nov. 2020 – Nov. 2023</span>
+          </div>
+          <ul>
+            <li>Coordenação técnica de um <strong>time multidisciplinar de 5 engenheiros</strong> — planejamento técnico, code reviews, mentoria e governança.</li>
+            <li>Interface direta com áreas não técnicas da empresa, alinhando necessidades de negócio às entregas técnicas.</li>
+            <li>Liderou a substituição de relatórios legados dependentes de view engine no banco por uma <strong>arquitetura orientada a dados em tempo real</strong> para o mercado de supply chain hospitalar.</li>
+            <li>Entregou o <strong>MVP para migração de um cliente de grande porte</strong> para a principal plataforma de compras hospitalares.</li>
+            <li><strong>SRE</strong>: escala de on-call, <strong>postmortems</strong> de incidentes e métricas de SLO/SLI; monitoramento de estabilidade e tempo de resposta com New Relic e Grafana.</li>
+          </ul>
+          <div class="tech-pill-container">
+            <span class="tech-category">Stack:</span> Ruby on Rails · Java · Node.js · React · PostgreSQL · Elasticsearch · Redis · Sidekiq · AWS · AWS SNS · OCI · Grafana · New Relic
+          </div>
+        </div>
+
+        <div class="job-block">
+          <div class="job-header">
+            <span class="job-title">Desenvolvedor Full Stack</span>
+            <span class="company">Jus.com.br — Dez. 2018 – Nov. 2020</span>
+          </div>
+          <ul>
+            <li>Manteve <strong>serviços distribuídos de alto tráfego</strong> em legal tech e refatorou sistemas legados, com foco em estabilidade e conformidade arquitetural; <strong>MySQL</strong> como banco principal.</li>
+            <li>Participou das decisões de arquitetura do backend; acompanhou SLO/SLI para a disponibilidade dos serviços.</li>
+          </ul>
+          <div class="tech-pill-container">
+            <span class="tech-category">Stack:</span> Ruby on Rails · Go · Python · MySQL · PostgreSQL · Elasticsearch · Redis · Sidekiq · Kubernetes · AWS
+          </div>
+        </div>
+
+        <div class="job-block">
+          <div class="job-header">
+            <span class="job-title">Desenvolvedor Web &amp; Mobile (PJ)</span>
+            <span class="company">AMC Publicidade — Jul. 2018 – Nov. 2018</span>
+          </div>
+          <ul>
+            <li>Manutenção e melhorias nos <strong>sites WordPress (PHP)</strong> da agência e app Android “Teresina em Dia” em <strong>React Native + Expo</strong> — mapa interativo por zonas da cidade, navegação em stack e integração com APIs REST. Modernizado em 2026 para React Native 0.81, Expo SDK 54 e React 19.</li>
+          </ul>
+          <div class="tech-pill-container">
+            <span class="tech-category">Stack:</span> PHP · WordPress · React Native · Expo · JavaScript · APIs REST
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Competências Técnicas</h2>
         <ul>
-          <li>Maintained <strong>high-traffic distributed services</strong> for legal tech and refactored legacy systems, focusing on stability and architectural compliance; <strong>MySQL</strong> as the main database.</li>
-          <li>Key participant in backend architectural decisions; tracked SLO/SLI for service availability.</li>
+          <li><strong>Backend:</strong> Ruby on Rails, Java, Kotlin, Node.js, TypeScript</li>
+          <li><strong>APIs &amp; Arquitetura:</strong> REST, GraphQL, Microsserviços, Arquitetura Orientada a Eventos, Sistemas Distribuídos</li>
+          <li><strong>Mensageria &amp; Assíncrono:</strong> Apache Kafka, AWS SQS (FIFO, DLQ), AWS SNS, Sidekiq</li>
+          <li><strong>Dados:</strong> PostgreSQL, MySQL, Redis, Elasticsearch</li>
+          <li><strong>Cloud &amp; DevOps:</strong> AWS (EC2, S3, RDS, Lambda, SQS, SNS), OCI, Terraform, Docker, Kubernetes, GitHub Actions, GitLab CI/CD</li>
+          <li><strong>Observabilidade &amp; SRE:</strong> Datadog, Grafana, New Relic, SLO/SLI, On-call, Postmortems</li>
+          <li><strong>Testes:</strong> RSpec, Capybara, FactoryBot, Jest, TDD</li>
+          <li><strong>Frontend &amp; Mobile:</strong> React, React Native</li>
+          <li><strong>Engenharia com IA:</strong> Integração de LLMs (Claude, Gemini), Servidores MCP próprios</li>
+          <li><strong>Liderança:</strong> Especificações Técnicas (RFCs), Code Review, Mentoria, Governança Técnica</li>
+          <li><strong>Também conhece:</strong> Python, Go, .NET / C#, PHP (WordPress), Vue.js, MongoDB</li>
         </ul>
-        <div class="tech-pill-container">
-          <span class="tech-category">Stack:</span> Ruby on Rails · Go · Python · MySQL · PostgreSQL · Elasticsearch · Redis · Sidekiq · Kubernetes · AWS
-        </div>
-      </div>
+      </section>
 
-      <div class="job-block">
-        <div class="job-header">
-          <span class="job-title">Web &amp; Mobile Developer (Contractor)</span>
-          <span class="company">AMC Publicidade — Jul. 2018 – Nov. 2018</span>
-        </div>
+      <section>
+        <h2>Formação &amp; Cursos</h2>
         <ul>
-          <li>Maintained and improved the agency’s <strong>WordPress (PHP)</strong> websites.</li>
-          <li>Built the “Teresina em Dia” Android app in <strong>React Native + Expo</strong> — interactive city-zone map, stack navigation and REST API integration. Modernized in 2026 to React Native 0.81, Expo SDK 54 and React 19.</li>
+          <li><strong>Análise e Desenvolvimento de Sistemas</strong> — IFPI · Formação Superior Interrompida</li>
+          <li><strong>Técnico em Logística</strong> — UNINASSAU · 2016 – 2018</li>
+          <li><strong>Database Administration</strong> — SENAI</li>
+          <li><strong>Git &amp; Azure DevOps Fundamentals</strong> — Balta.io</li>
+          <li><strong>.NET Fundamentals</strong> — Balta.io</li>
         </ul>
-        <div class="tech-pill-container">
-          <span class="tech-category">Stack:</span> PHP · WordPress · React Native · Expo · JavaScript · REST APIs
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <h2>Technical Skills</h2>
-      <ul>
-        <li><strong>Backend:</strong> Ruby on Rails, Java, Kotlin, Node.js, TypeScript</li>
-        <li><strong>APIs &amp; Architecture:</strong> REST, GraphQL, Microservices, Event-Driven Architecture, Distributed Systems</li>
-        <li><strong>Messaging &amp; Async:</strong> Apache Kafka, AWS SQS (FIFO, DLQ), AWS SNS, Sidekiq</li>
-        <li><strong>Data:</strong> PostgreSQL, MySQL, Redis, Elasticsearch</li>
-        <li><strong>Cloud &amp; DevOps:</strong> AWS (EC2, S3, RDS, Lambda, SQS, SNS), OCI, Terraform, Docker, Kubernetes, GitHub Actions, GitLab CI/CD</li>
-        <li><strong>Observability &amp; SRE:</strong> Datadog, Grafana, New Relic, SLO/SLI, On-call, Postmortems</li>
-        <li><strong>Testing:</strong> RSpec, Capybara, FactoryBot, Jest, TDD</li>
-        <li><strong>Frontend &amp; Mobile:</strong> React, React Native</li>
-        <li><strong>AI Engineering:</strong> LLM integration (Claude, Gemini), Custom MCP servers</li>
-        <li><strong>Leadership:</strong> Technical Specs (RFCs), Code Review, Mentoring, Technical Governance</li>
-        <li><strong>Also familiar with:</strong> Python, Go, .NET / C#, PHP (WordPress), Vue.js, MongoDB</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Education &amp; Certifications</h2>
-      <ul>
-        <li><strong>Systems Analysis &amp; Development</strong> — IFPI · Relevant coursework (not completed)</li>
-        <li><strong>Logistics Technician</strong> — UNINASSAU · 2016 – 2018</li>
-        <li><strong>Database Administration</strong> — SENAI</li>
-        <li><strong>Git &amp; Azure DevOps Fundamentals</strong> — Balta.io</li>
-        <li><strong>.NET Fundamentals</strong> — Balta.io</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Languages</h2>
-      <ul>
-        <li><strong>Portuguese:</strong> Native</li>
-        <li><strong>English:</strong> Professional Working Proficiency</li>
-      </ul>
-    </section>
+      <section>
+        <h2>Idiomas</h2>
+        <ul>
+          <li><strong>Português:</strong> Nativo</li>
+          <li><strong>Inglês:</strong> Proficiência profissional</li>
+        </ul>
+      </section>
+    </div>
   </div>
+  <button id="print-btn" type="button" aria-label="Print resume" title="Print resume" onclick="window.print()">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M6 9V3h12v6"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7"/>
+    </svg>
+  </button>
+  <script>
+    (function () {
+      var PRINT = { en: 'Print resume', pt: 'Imprimir currículo' };
+      var TITLES = { en: 'Bruno Darshan | Resume', pt: 'Bruno Darshan | Currículo' };
+      function setLang(lang, save) {
+        if (lang !== 'pt') lang = 'en';
+        document.querySelectorAll('[data-lang]').forEach(function (el) { el.hidden = el.dataset.lang !== lang; });
+        document.querySelectorAll('[data-set-lang]').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.setLang === lang); });
+        document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+        document.title = TITLES[lang];
+        var pb = document.getElementById('print-btn');
+        pb.setAttribute('aria-label', PRINT[lang]); pb.title = PRINT[lang];
+        if (save) {
+          try { localStorage.setItem('resume-lang', lang); } catch (e) {}
+          var url = new URL(location.href); url.searchParams.set('lang', lang); history.replaceState(null, '', url);
+        }
+      }
+      var param = new URLSearchParams(location.search).get('lang');
+      var saved = null; try { saved = localStorage.getItem('resume-lang'); } catch (e) {}
+      var browser = (navigator.language || '').toLowerCase().indexOf('pt') === 0 ? 'pt' : 'en';
+      setLang(param || saved || browser, false);
+      document.querySelectorAll('[data-set-lang]').forEach(function (b) {
+        b.addEventListener('click', function () { setLang(b.dataset.setLang, true); });
+      });
+    })();
+  </script>
 </body>
 </html>
